@@ -43,3 +43,72 @@ void main() {
     ),
   );
 }
+------------------------------------------------------------------------------------------------------------
+//By deleting the center widget we have the below code to add some functionalities 
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: 
+    ),
+  ));
+}
+
+------------------------------------------------------------------------------
+//With the scaffold you can insert the AppBar widget with AppBar , title  and it properties eg backgroud colors etc
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: Center(child: Text('I Am Rich')),
+      ),
+    ),
+  ));
+}
+-------------------------------------------------------------------------------------------------
+//Widget to insert image. image widget 
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      backgroundColor: Colors.blueGrey,
+      appBar: AppBar(
+        backgroundColor: Colors.blueGrey[900],
+        title: Center(child: Text('I Am Rich')),
+      ),
+      body: Center(
+        child: Image(
+          image: NetworkImage('https://www.w3schools.com/w3css/img_lights.jpg'),
+        ),
+      ),
+    ),
+  ));
+}
+
+--------------------------------------------------------------------------------------------
+//if we want to center the image click in the Widget end press on Alt+Enter choose from the popup menu
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      backgroundColor: Colors.blueGrey,
+      appBar: AppBar(
+        backgroundColor: Colors.blueGrey[900],
+        title: Center(child: Text('I Am Rich')),
+      ),
+      body: Center(
+        child: Image(
+          image: NetworkImage('https://www.w3schools.com/w3css/img_lights.jpg'),
+        ),
+      ),
+    ),
+  ));
+}
