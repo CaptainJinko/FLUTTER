@@ -1,0 +1,49 @@
+//How to use Hot Reload and Hot Restart
+// first start with the below code
+
+import 'package:flutter/material.dart';
+
+void main() {
+
+   runApp(
+     MaterialApp(
+       home: Scaffold(
+         backgroundColor:Colors.teal,
+         body: Container(),
+        ), //Scaffold
+      ),//MaterialApp
+    );
+}
+
+// if you type stless outside the main code and press enter, you will get
+
+class  extends StatelessWidget {
+   @override
+   Widget build(BuildContext context) {
+     return Container();   
+  }
+}
+
+// you then cut off using Ctrl+X the part of the code from MaterialApp upward to the MaterialApp just before the runApp
+// paste it and it will look like the below code 
+-----------------------------------------------------------------------------------------------------------------------
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        body: Container(),
+      ),
+    );
+  }
+}
+
+// when you make any changes in the code you just click the hot reload button and changes take effect instanly in couple of seconds
+//not using the usual method of run and wait for the code execute for longer seconds. 
