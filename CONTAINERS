@@ -1,0 +1,165 @@
+//CONTAINER
+//This example shows a 48x48 amber square (placed inside a Center widget in case the parent widget has its own opinions regarding the 
+//size that the Container should take), with a margin so that it stays away from neighboring widgets:
+ 
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(),
+        body: Center(
+          child: Container(
+            margin: const EdgeInsets.all(10.0),
+            color: Colors.amber[600],
+            width: 48.0,
+            height: 48.0,
+          ),
+        ),
+      ),
+    );
+  }
+}
+--------------------------------------------------------------------------------------------------------------
+//If the widget has no child, no height, no width, no constraints, and no alignment, but the parent provides bounded constraints, 
+//then Container expands to fit the constraints provided by the parent.
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: Container(
+          color: Colors.white,
+        ),
+      ),
+    );
+  }
+}
+--------------------------------------------------------------------------------------------------------------------------
+//Container with a child 
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: Container(
+          color: Colors.white,
+          child: Text('Hello'),
+        ),
+      ),
+    );
+  }
+}
+---------------------------------------------------------------------------------------------------------------------------------------
+//container in a safe area Alt+Enter (Window and Linux) wrap in a new widget. in thre widget area enter SafeArea
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: widget(
+          child: Container(
+            color: Colors.white,
+            child: Text('Hello'),
+          ),
+        ),
+      ),
+    );
+  }
+}
+.......................................................................................................................................
+//container is SafeArea
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Container(
+            color: Colors.white,
+            child: Text('Hello'),
+          ),
+        ),
+      ),
+    );
+  }
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+//Containers with childern 
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Column(
+            children: <Widget>[
+              Container(
+                height: 100.0,
+                width: 100.0,
+                color: Colors.white,
+                child: Text('Container 1'),
+              ),
+              Container(
+                width: 100.0,
+                height: 100.0,
+                color: Colors.blue,
+                child: Text('Container 2'),
+              ),
+              Container(
+                  width: 100.0,
+                  height: 100.0,
+                  color: Colors.red,
+                  child: Text('Container 3')),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+.......................................................................................................................................
+
