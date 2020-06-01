@@ -1,0 +1,51 @@
+//Container with margins and no child
+Container(
+  child: Text('Hello Is not Boring'),
+  colos:Colors.blue,
+  padding: EdgeInsets.all(20.0),
+           margin: EdgeInssts.all(20.0),
+
+  );
+
+
+---------------------------------------------
+Container( 
+  child: Text('Less Boring'),
+  decoration: BoxDecoration(
+    shape: BoxShape.circle,
+    color:Colors.blue,
+    
+   ),
+    margin: EdgeInsets.all(25.0),
+    padding: EdgeInssts.all(40.0),
+   
+);
+
+--------------------------------------
+Container(
+   child: Text('Less Boring'),
+   color: Colors.blue,
+alignment: Alignment.center
+ );
+
+---------------------------------------
+//Get fancy with transform
+Container(
+   child: Text('Less boring '),
+   color: Colors.blue,
+   alignment: Alignment.center,
+   constraints: BoxConstraints.tightForFinite(
+      width: 200,  
+   ), 
+
+ );
+-----------------------------------------------
+Container(
+   child:Text('Less Boring'),
+   color: Colors.blue,
+   width: 200.0,
+   height: 200.0,
+   transform: Matrix4.rotationZ(0.05),
+
+ );
+
