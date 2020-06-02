@@ -98,7 +98,7 @@ class MyApp extends StatelessWidget {
   }
 }
 ---------------------------------------------------------------------------------------------------------------------------------------
-//how to streach container with infinity
+//how to streach container with infinity and when crossAxisAlignment is used the heght is not take into account anymore.
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -120,25 +120,19 @@ class MyApp extends StatelessWidget {
               Container(
                 child: Text('Container 1'),
                 color: Colors.blue,
-                height: 100.0,
                 width: 100.0,
               ),
               Container(
                 child: Text('Container 2'),
                 color: Colors.red,
-                height: 100.0,
                 width: 100.0,
               ),
               Container(
                 child: Text('Container 3'),
                 color: Colors.white,
-                height: 100.0,
                 width: 100.0,
               ),
-              Container(
-                width: double.infinity,
-                height: 300.0,
-              )
+               
             ],
           ),
         ),
