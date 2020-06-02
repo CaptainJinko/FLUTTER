@@ -8,7 +8,7 @@ Container(
   );
 
 
----------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 Container( 
   child: Text('Less Boring'),
   decoration: BoxDecoration(
@@ -21,14 +21,14 @@ Container(
    
 );
 
---------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 Container(
    child: Text('Less Boring'),
    color: Colors.blue,
 alignment: Alignment.center
  );
 
----------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 //Get fancy with transform
 Container(
    child: Text('Less boring '),
@@ -39,7 +39,7 @@ Container(
    ), 
 
  );
------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 Container(
    child:Text('Less Boring'),
    color: Colors.blue,
@@ -49,3 +49,51 @@ Container(
 
  );
 
+********************************************************************************************************************************
+//Container incorporating the follwing Widgets SafeArea,Column Text  and properties Eg margins, height width,  transfrom and 
+// rotationZ(0.25)
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        body: SafeArea(
+          child: Column(
+            children: <Widget>[
+              Container(
+                child: Text('Container 1'),
+                color: Colors.blue,
+                height: 100.0,
+                width: 100.0,
+                transform: Matrix4.rotationZ(0.25),
+              ),
+              Container(
+                child: Text('Container 2'),
+                margin: EdgeInsets.all(20.0),
+                color: Colors.black,
+                height: 100.0,
+                width: 100.0,
+              ),
+              Container(
+                child: Text('Container 3'),
+                margin: EdgeInsets.all(20.0),
+                color: Colors.red,
+                height: 100.0,
+                width: 100.0,
+                transform: Matrix4.rotationZ(0.25),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
