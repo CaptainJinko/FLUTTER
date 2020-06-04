@@ -1,0 +1,132 @@
+//This how to customize Yaml page text to upload your image, the Assets has to be on the user material-disign the indented line 2 spaces btn
+// image has to 2 spaces indented to the assets  
+
+name: mi_card
+description: A new Flutter application.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+
+  uses-material-design: true
+
+  assets:
+    - images/Elias.jpg.jpg    //here the Elias.jpg.jpg is the image name 
+
+---------------------------------------------------------------------------------------------------
+
+//The following code with incoporated widgets Eg CircleAvatar and its properties
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Column(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/Elias.jpg.jpg'),
+              ),
+              Text('Elias Jinko'),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
+//How to import, download the of FONT of your liking from google and incorporate it into your app
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Column(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/Elias.jpg.jpg'),
+              ),
+              Text(
+                'Elias Jinko',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+//YAML file with incorporating fonts images and fonts style 
+
+name: mi_card
+description: A new Flutter application.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - images/Elias.jpg.jpg
+
+  fonts:
+  - family:  Pacifico
+    fonts:
+    - asset: fonts/Pacifico-Regular.ttf
+-------------------------------------------------------------------------------------------------------------------------------
+  
