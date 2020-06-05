@@ -1,5 +1,5 @@
-//This how to customize Yaml page text to upload your image, the Assets has to be on the user material-disign the indented line 2 spaces btn
-// image has to 2 spaces indented to the assets  
+//This how to customize Yaml page text to upload your image, the Assets has to be on the user material-disign the indented line 2 
+//spaces btn image has to 2 spaces indented to the assets  
 
 name: mi_card
 description: A new Flutter application.
@@ -26,9 +26,8 @@ flutter:
   assets:
     - images/Elias.jpg.jpg    //here the Elias.jpg.jpg is the image name 
 
----------------------------------------------------------------------------------------------------
-
-//The following code with incoporated widgets Eg CircleAvatar and its properties
+---------------------------------------------------------------------------------------------------------------------------------------
+//The following will use widgets Eg CircleAvatar and its properties to incorporate fonts from fonts.google.com into your app for free 
 
 import 'package:flutter/material.dart';
 
@@ -98,8 +97,7 @@ class MyApp extends StatelessWidget {
 }
 
 --------------------------------------------------------------------------------------------------------------------------------
-//YAML file with incorporating fonts images and fonts style 
-
+//YAML file with incorporating fonts images and fonts style. In yaml identation level is extremely important.
 name: mi_card
 description: A new Flutter application.
 version: 1.0.0+1
@@ -128,5 +126,5 @@ flutter:
   - family:  Pacifico
     fonts:
     - asset: fonts/Pacifico-Regular.ttf
--------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
   
