@@ -1,0 +1,268 @@
+//The following code is replaced by Card inntead of container. It to gie its square rounded edges and shawdows 
+// nice looking as if is popup from a paper// Card does not have padding as property, it is way to wrap the Row with a widge then
+//we can include padding as a propeery of Card to give its good rounded edges looking.
+
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Column(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/Elias.jpg.jpg'),
+              ),
+              Text(
+                'Elias Jinko',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'FLUTTER SOFTWARE ENGINEER',
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  color: Colors.teal.shade100,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  letterSpacing: 2.5,
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.phone,
+                      size: 20.0,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text('+316013456789',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Source Sans Pro',
+                          fontSize: 20.0,
+                        )),
+                  ],
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.email,
+                      size: 20.0,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20.0,
+                    ),
+                    Text(
+                      'elias@mysoftwarecompany.com',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+//The following code is (ListTile) a prebuild widgtes with its properties to get fine rouned edges to get enough space 
+//than using a padding// Card by default comes with white color. So we can delete the property color: Colors.white and still 
+  
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Column(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/Elias.jpg.jpg'),
+              ),
+              Text(
+                'Elias Jinko',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'FLUTTER SOFTWARE ENGINEER',
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  color: Colors.teal.shade100,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  letterSpacing: 2.5,
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    size: 20.0,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    '+316012345678',
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        fontFamily: 'Source Sans Pro',
+                        color: Colors.black),
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    'elias@Biozonica.com',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.green,
+                      fontFamily: 'Source Sans Pro',
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+//With the (mainAxisAlignment: MainAxisAlignment.center,) we can then get the card to be centered. Card by default have white color. So we can 
+// delete the color: (Colors.white) and still get our white . 
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/Elias.jpg.jpg'),
+              ),
+              Text(
+                'Elias Jinko',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'FLUTTER SOFTWARE ENGINEER',
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  color: Colors.teal.shade100,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  letterSpacing: 2.5,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    size: 20.0,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    '+316012345678',
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        fontFamily: 'Source Sans Pro',
+                        color: Colors.black),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    //color: Colors.black,
+                  ),
+                  title: Text(
+                    'elias@Biozonica.com',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.green,
+                      fontFamily: 'Source Sans Pro',
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+ 
+            
