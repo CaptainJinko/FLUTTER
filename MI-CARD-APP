@@ -1,4 +1,4 @@
-//The following code is replaced by Card inntead of container. It to gie its square rounded edges and shawdows 
+//The following code is replaced by Card inntead of container. It to gives its square rounded edges and shawdows 
 // nice looking as if is popup from a paper// Card does not have padding as property, it is way to wrap the Row with a widge then
 //we can include padding as a propeery of Card to give its good rounded edges looking.
 
