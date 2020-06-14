@@ -1,37 +1,4 @@
-//The beginning of a dice project 
-import 'package:flutter/material.dart';
-
-void main() {
-  return runApp(
-    MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.red,
-        appBar: AppBar(
-          title: Text('Dicee'),
-          backgroundColor: Colors.red,
-        ),
-        body: DicePage(),
-      ),
-    ),
-  );
-}
-
-class DicePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Image(
-          image: AssetImage('images/dice1.png'),
-        ),
-      ],
-    );
-  }
-}
-.......................................................................................................................................
-//Cutting the image Widget and later Adding [Expanded] Widget Eg Expanded it has one child then adding our image widgte 
-// gives us the the below result. authomatically resizes it to fill the available space in the horizal space because we are in Row
-
+//Adding image by using Image.asset('images/dice1.png') from your folder
 
 import 'package:flutter/material.dart';
 
@@ -66,7 +33,10 @@ class DicePage extends StatelessWidget {
 }
 
 ........................................................................................................................................
-//Adding image by using Image.asset('images/dice1.png') from your folder
+ //Cutting the image Widget and later Adding [Expanded] Widget Eg Expanded has one child then adding our image widges 
+// gives us the the below result. authomatically resizes it to fill the available space in the horizal space because we are in Row
+
+
 
 import 'package:flutter/material.dart';
 
@@ -102,7 +72,6 @@ class DicePage extends StatelessWidget {
 }
 
 ----------------------------------------------------------------------------------------------------------------------------------------
-
 //using intention action to add padiing around the widget you paading and it's properies.putting the cursor on the widget [image.assets]
 //and wait for light buld and either press [Alt+Enter ] to slect padding or using the menus in the intention action 
  
@@ -150,7 +119,7 @@ class DicePage extends StatelessWidget {
 ........................................................................................................................................
 
 //FlatButton with [VoidCallBack ] Adding FlatButton to our code for functioality 
-
+//invoking ananymous  methods [onPreesed ] to write a text message in console
 import 'package:flutter/material.dart';
 
 void main() {
@@ -198,15 +167,14 @@ class DicePage extends StatelessWidget {
 .......................................................................................................................................
 //To create and call a function in dart, you follow this syntax
 // void getMilk () { //do somthing  code in this block }
-//        getMilk(); 
+// getMilk(); 
 
-// getMilk is the name of the function,  { where the you write your code,    }
+// getMilk is the name of the function,  { where you write your code,    }
 // getMilk(); // how you call the function 
-// the above method is known as named function because it has a name. there is also ananymous function which has no name and looks like the below 
-
+// the above method is known as named function because it has a name. there is also ananymous function which has no name and looks 
+//like the below 
 // () {     //  do something }
 //Eg  onPressed: () {/// do something is an ananymous function }
-
 //Making the dice image change reactively 
  
 
