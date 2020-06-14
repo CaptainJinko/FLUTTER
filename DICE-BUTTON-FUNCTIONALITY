@@ -196,3 +196,75 @@ class DicePage extends StatelessWidget {
   }
 }
 .......................................................................................................................................
+//To create and call a function in dart, you follow this syntax
+// void getMilk () { //do somthing  code in this block }
+//        getMilk(); 
+
+// getMilk is the name of the function,  { where the you write your code,    }
+// getMilk(); // how you call the function 
+// the above method is known as named function because it has a name. there is also ananymous function which has no name and looks like the below 
+
+// () {     //  do something }
+//Eg  onPressed: () {/// do something is an ananymous function }
+
+//Making the dice image change reactively 
+ 
+
+import 'dart:math';
+import 'package:flutter/material.dart';
+
+void main() {
+  return runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.red,
+        appBar: AppBar(
+          title: Text('Dicee for Fredrick '),
+          backgroundColor: Colors.red,
+        ),
+        body: DicePage(),
+      ),
+    ),
+  );
+}
+
+class DicePage extends StatefulWidget {
+  @override
+  _DicePageState createState() => _DicePageState();
+}
+
+class _DicePageState extends State<DicePage> {
+  int leftDiceNumber = 1;
+  int rightDiceNumber = 1;
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                setState(() {
+                  leftDiceNumber = Random().nextInt(6) + 1;
+                });
+              },
+              child: Image.asset('images/dice$leftDiceNumber.png'),
+            ),
+          ),
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                setState(() {
+                  rightDiceNumber = Random().nextInt(6) + 1;
+                });
+              },
+              child: Image.asset('images/dice$rightDiceNumber.png'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+..................................................................................................................................
