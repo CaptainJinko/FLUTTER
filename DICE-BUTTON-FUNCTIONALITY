@@ -298,3 +298,155 @@ class _DicePageState extends State<DicePage> {
   }
 }
 
+--------------------------------------------------------------------------------------------------------------------------
+
+//In order to change the dice by clicking of the button, the following code should be updated 
+//which make sure the [setState () {}] functions contain both leftDiceNumber and rightDice varibles
+
+import 'package:flutter/material.dart';
+import 'dart:math';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.red,
+        appBar: AppBar(
+          title: Center(
+            child: Text(
+              'Dice',
+              style: TextStyle(
+                fontSize: 25.0,
+              ),
+            ),
+          ),
+          backgroundColor: Colors.red,
+        ),
+        body: DicePage(),
+      ),
+    ),
+  );
+}
+
+class DicePage extends StatefulWidget {
+  @override
+  _DicePageState createState() => _DicePageState();
+}
+
+class _DicePageState extends State<DicePage> {
+  int leftDiceNumber = 1;
+  int rightDiceNumber = 1;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                setState(() {
+                  leftDiceNumber = Random().nextInt(6) + 1;
+                  rightDiceNumber = Random().nextInt(6) + 1;
+                });
+              },
+              child: Image(
+                image: AssetImage('images/dice$leftDiceNumber.png'),
+              ),
+            ),
+          ),
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                setState(() {
+                  leftDiceNumber = Random().nextInt(6) + 1;
+                  rightDiceNumber = Random().nextInt(6) + 1;
+                });
+                print('The Right Button is Clicked');
+              },
+              child: Image(
+                image: AssetImage('images/dice$rightDiceNumber.png'),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+ 
+-----------------------------------------------------------------------------------------------------------------------------------------
+//writing a function to to minimun more code so that we can call the function and we dont have be repeating the code 
+
+import 'package:flutter/material.dart';
+import 'dart:math';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.red,
+        appBar: AppBar(
+          title: Center(
+            child: Text(
+              'Dice',
+              style: TextStyle(
+                fontSize: 25.0,
+              ),
+            ),
+          ),
+          backgroundColor: Colors.red,
+        ),
+        body: DicePage(),
+      ),
+    ),
+  );
+}
+
+class DicePage extends StatefulWidget {
+  @override
+  _DicePageState createState() => _DicePageState();
+}
+
+class _DicePageState extends State<DicePage> {
+  int leftDiceNumber = 1;
+  int rightDiceNumber = 1;
+
+  void changeDiceFace() {
+    setState(() {
+      leftDiceNumber = Random().nextInt(6) + 1;
+      rightDiceNumber = Random().nextInt(6) + 1;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                changeDiceFace();
+              },
+              child: Image(
+                image: AssetImage('images/dice$leftDiceNumber.png'),
+              ),
+            ),
+          ),
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                changeDiceFace();
+              },
+              child: Image(
+                image: AssetImage('images/dice$rightDiceNumber.png'),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+  
