@@ -1,0 +1,80 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.lightBlue,
+        appBar: AppBar(
+          backgroundColor: Colors.blue[900],
+          title: Center(
+            child: Text('Ask Me Anything'),
+          ),
+        ),
+        body: Center(
+          child: MagicBall(),
+        ),
+      ),
+    ),
+  );
+}
+
+class MagicBall extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Expanded(
+          child: Container(
+            child: CircleAvatar(
+              radius: 150.0,
+              child: Image.asset('images/ball2.png'),
+            ),
+          ),
+        )
+      ],
+    );
+  }
+}
+
+------------------------------------------------------------------------------------------
+// Wiithout Container
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.lightBlue,
+        appBar: AppBar(
+          backgroundColor: Colors.blue[900],
+          title: Center(
+            child: Text('Ask Me Anything'),
+          ),
+        ),
+        body: Center(
+          child: MagicBall(),
+        ),
+      ),
+    ),
+  );
+}
+
+class MagicBall extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Expanded(
+          child: CircleAvatar(
+            radius: 150.0,
+            child: Image.asset('images/ball2.png'),
+          ),
+        )
+      ],
+    );
+  }
+}
