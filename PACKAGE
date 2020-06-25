@@ -1,0 +1,55 @@
+//Xylohpnes app 
+
+import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart';
+
+void main() => runApp(XylophoneApp());
+
+class XylophoneApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Text(adjectives.last),
+          ),
+        ),
+      ),
+    );
+  }
+}
+...............................................................................................................................
+//yaml file incorporating english words dependencies from the flutter team website 
+
+name: xylophone
+description: A new Flutter application.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+  english_words: ^3.1.5    ## english word dependencies from the flutter team package
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
