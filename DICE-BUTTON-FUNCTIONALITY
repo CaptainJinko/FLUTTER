@@ -449,4 +449,97 @@ class _DicePageState extends State<DicePage> {
     );
   }
 }
-  
+
+................................................................................................................................................................................
+//xylophone with variables,fuction impletations and calling the functiion in method onPressed:() {} to reduce repeative coding 
+//variable and function at 
+// [class XylophoneApp extends StatelessWidget {
+  void playXylophone(int soundNumber) {
+    final player = AudioCache();
+    player.play('note$soundNumber.wav');
+  }]
+                    final player = AudioCache();
+                    player.play('note1.wav');
+  },
+},
+
+//calling the function in method onPressed(){
+   playXylophone();
+},
+ 
+..................................................................................................................................................................
+
+import 'package:flutter/cupertino.dart';  //we are not using this import in this app, one of the yamil file which can b used 
+import 'package:flutter/material.dart';
+import 'package:audioplayers/audio_cache.dart';
+
+void main() => runApp(XylophoneApp());
+
+class XylophoneApp extends StatelessWidget {
+  void playXylophone(int soundNumber) {
+    final player = AudioCache();
+    player.play('note$soundNumber.wav');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Center(
+            child: Text('African Xylophone'),
+          ),
+        ),
+        body: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              FlatButton(
+                color: Colors.red,
+                onPressed: () {
+                  playXylophone(1);
+                },
+              ),
+              FlatButton(
+                color: Colors.blue,
+                onPressed: () {
+                  playXylophone(2);
+                },
+              ),
+              FlatButton(
+                color: Colors.green,
+                onPressed: () {
+                  playXylophone(3);
+                },
+              ),
+              FlatButton(
+                color: Colors.black,
+                onPressed: () {
+                  playXylophone(4);
+                },
+              ),
+              FlatButton(
+                color: Colors.yellowAccent,
+                onPressed: () {
+                  playXylophone(5);
+                },
+              ),
+              FlatButton(
+                color: Colors.orange,
+                onPressed: () {
+                  playXylophone(6);
+                },
+              ),
+              FlatButton(
+                color: Colors.indigo,
+                onPressed: () {
+                  playXylophone(7);
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
