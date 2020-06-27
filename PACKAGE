@@ -1,4 +1,4 @@
-//Xylohpnes app 
+//Xylohpnes app[cloning of xylophone code to start the app  
 
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
@@ -19,7 +19,7 @@ class XylophoneApp extends StatelessWidget {
     );
   }
 }
-...............................................................................................................................
+................................................................................................................................................................................
 //yaml file incorporating english words dependencies from the flutter team website 
 
 name: xylophone
@@ -49,7 +49,120 @@ flutter:
     - assets/
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//foundation of a xylophnes app without [app Bar], using the new version syntax as [ void main() =>runApp(xylophoneApp()); 
+voi
+import 'package:flutter/material.dart';
+import 'package:audioplayers/audio_cache.dart';
 
+void main() => runApp(XylophoneApp());
 
+class XylophoneApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Container(
+              child: FlatButton(
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play('note1.wav');
+                },
+                child: Text('Click Me'),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
 
+................................................................................................................................................................................
+//Add [FlatButton and audio packag] 
+
+import 'package:flutter/material.dart';
+import 'package:audioplayers/audio_cache.dart';
+
+void main() => runApp(XylophoneApp());
+
+class XylophoneApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Center(
+            child: Text('African Xylophone'),
+          ),
+        ),
+        body: SafeArea(
+          child: Center(
+            child: Column(
+              children: <Widget>[
+                FlatButton(
+                  color: Colors.red,
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('note1.wav');
+                  },
+                  child: Text('Click Me'),
+                ),
+                FlatButton(
+                  color: Colors.blue,
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('note2.wav');
+                  },
+                  child: Text('Click Me'),
+                ),
+                FlatButton(
+                  color: Colors.green,
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('note3.wav');
+                  },
+                  child: Text('Click Me'),
+                ),
+                FlatButton(
+                  color: Colors.grey,
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('note4.wav');
+                  },
+                  child: Text('Click Me'),
+                ),
+                FlatButton(
+                  color: Colors.yellowAccent,
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('note5.wav');
+                  },
+                  child: Text('Click Me'),
+                ),
+                FlatButton(
+                  color: Colors.grey,
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('note6.wav');
+                  },
+                  child: Text('Click Me'),
+                ),
+                FlatButton(
+                  color: Colors.indigo,
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('note6.wav');
+                  },
+                  child: Text('Click Me'),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
 
