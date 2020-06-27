@@ -1,0 +1,48 @@
+Basic fynction without arguments
+void main(){
+onPressed() {
+ },
+},
+
+...................................................................................................................................................................................
+
+Fucntion with argument
+
+void playSoud(String Name){
+final AudioCache player=AudioCache();
+player.play('$name.wave');
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+void main(){
+  
+  greet('Elias');
+  
+}
+void greet(String name){
+  print('Good Morning $name');
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+void main(){
+  
+  greet('Elias Adam Jinko');
+  
+ }
+
+void greet(String personToGreet){
+  
+  print('Goed Morgen Meneer $personToGreet');
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ //function in explicit way by flutter team 
+ 
+ void main(){
+   
+   greet(greeting:'How are you', personToGreet:'Elias Jinko');
+   
+ }
+
+void greet({String personToGreet, String greeting}){   //remember the curly braces in the argument
+  
+  print('$greeting, $personToGreet');
+}
+
