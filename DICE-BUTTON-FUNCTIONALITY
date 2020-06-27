@@ -543,3 +543,100 @@ class XylophoneApp extends StatelessWidget {
     );
   }
 }
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Adding[ Expanded widget and  crossAxisAlignment: CrossAxisAlignment.stretch] properties to evenly divide the widgets and strecht the to the other end of the screen
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:audioplayers/audio_cache.dart';
+import 'package:flutter/rendering.dart';
+
+void main() => runApp(XylophoneApp());
+
+class XylophoneApp extends StatelessWidget {
+  void playXylophone(int soundNumber) {
+    final player = AudioCache();
+    player.play('note$soundNumber.wav');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          title: Center(
+            child: Text('African Xylophone'),
+          ),
+        ),
+        body: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Expanded(
+                child: FlatButton(
+                  color: Colors.red,
+                  onPressed: () {
+                    playXylophone(1);
+                  },
+                ),
+              ),
+              Expanded(
+                child: FlatButton(
+                  color: Colors.yellowAccent,
+                  onPressed: () {
+                    playXylophone(2);
+                  },
+                ),
+              ),
+              Expanded(
+                child: FlatButton(
+                  color: Colors.green,
+                  onPressed: () {
+                    playXylophone(3);
+                  },
+                ),
+              ),
+              Expanded(
+                child: FlatButton(
+                  color: Colors.white,
+                  onPressed: () {
+                    playXylophone(4);
+                  },
+                ),
+              ),
+              Expanded(
+                child: FlatButton(
+                  color: Colors.yellowAccent,
+                  onPressed: () {
+                    playXylophone(5);
+                  },
+                ),
+              ),
+              Expanded(
+                child: FlatButton(
+                  color: Colors.orange,
+                  onPressed: () {
+                    playXylophone(6);
+                  },
+                ),
+              ),
+              Expanded(
+                child: FlatButton(
+                  color: Colors.pink,
+                  onPressed: () {
+                    playXylophone(7);
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+ 
