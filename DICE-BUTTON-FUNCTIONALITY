@@ -32,7 +32,7 @@ class DicePage extends StatelessWidget {
   }
 }
 
-........................................................................................................................................
+.................................................................................................................................................................................
  //Cutting the image Widget and later Adding [Expanded] Widget Eg Expanded has one child then adding our image widges 
 // gives us the the below result. authomatically resizes it to fill the available space in the horizal space because we are in Row
 
@@ -71,7 +71,7 @@ class DicePage extends StatelessWidget {
   }
 }
 
-----------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //using intention action to add padiing around the widget you paading and it's properies.putting the cursor on the widget [image.assets]
 //and wait for light buld and either press [Alt+Enter ] to slect padding or using the menus in the intention action 
  
@@ -116,7 +116,7 @@ class DicePage extends StatelessWidget {
   }
 }
 
-........................................................................................................................................
+................................................................................................................................................................................
 
 //FlatButton with [VoidCallBack ] Adding FlatButton to our code for functioality 
 //invoking ananymous  methods [onPreesed ] to write a text message in console
@@ -164,7 +164,7 @@ class DicePage extends StatelessWidget {
     );
   }
 }
-.......................................................................................................................................
+................................................................................................................................................................................
 //To create and call a function in dart, you follow this syntax
 // void getMilk () { //do somthing  code in this block }
 // getMilk(); 
@@ -235,7 +235,7 @@ class _DicePageState extends State<DicePage> {
   }
 }
 
-..................................................................................................................................
+................................................................................................................................................................................
 
 //When you to the reaction of the two dices by clicking any of the buttons, then the below code is the solution 
 
@@ -298,7 +298,7 @@ class _DicePageState extends State<DicePage> {
   }
 }
 
---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //In order to change the dice by clicking of the button, the following code should be updated 
 //which make sure the [setState () {}] functions contain both leftDiceNumber and rightDice varibles
@@ -375,7 +375,7 @@ class _DicePageState extends State<DicePage> {
   }
 }
  
------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //writing a function to to minimun more code so that we can call the function and we dont have be repeating the code 
 
 import 'package:flutter/material.dart';
@@ -467,7 +467,7 @@ class _DicePageState extends State<DicePage> {
    playXylophone();
 },
  
-..................................................................................................................................................................
+.................................................................................................................................................................................
 
 import 'package:flutter/cupertino.dart';  //we are not using this import in this app, one of the yamil file which can b used 
 import 'package:flutter/material.dart';
@@ -638,5 +638,3 @@ class XylophoneApp extends StatelessWidget {
   }
 }
 
-
- 
