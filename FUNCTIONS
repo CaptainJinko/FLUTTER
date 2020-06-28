@@ -33,7 +33,7 @@ void greet(String personToGreet){
   
   print('Goed Morgen Meneer $personToGreet');
 }
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  //function in explicit way by flutter team 
  
  void main(){
@@ -46,4 +46,99 @@ void greet({String personToGreet, String greeting}){   //remember the curly brac
   
   print('$greeting, $personToGreet');
 }
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Third form of function
+
+void main(){
+    findPerimeter();
+  }
+
+void findPerimeter(){
+  int length =4;
+  int breath= 2;
+  
+  int perimeter= 2 * (length+breath);
+  print('The perameter is = $perimeter');
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Passing parameter or Function with argument or method signature
+
+void main(){
+    findPerimeter(4, 2);
+  
+  }
+
+void findPerimeter( int length, int breath){         //even if you remove [void] it will work but leave it there for dart convetion 
+   
+  
+  int perimeter= 2 * (length+breath);
+  print('The perameter is = $perimeter');
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Return value from a function
+
+ void main(){
+    
+    int rectArea= getArea(25, 20);
+    print('The Area is = $rectArea');
+  }
+
+int getArea(int length, int breath){
+  
+  int area= length* breath;
+  
+  print(area);
+  return area;
+  
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Functions as Expression: [SHORT HAND SYNTAX] or // Expression in Function:
+
+void main(){
+  findPerimeter(4, 2);
+}
+
+
+void findPerimeter(int length, int breath){
+  print('The perimter is = ${2 * ( length + breath )}');
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//using the short syntax which also known as the fat arrow => remove the curly braces and join them 
+
+void main(){
+  findPerimeter(4, 8);
+}
+
+
+void findPerimeter(int length, int breath)=> print('The perimter is = ${2 * ( length + breath )}');
+  
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//when you are using the fat arrow [=>], dont use the return  keyword
+
+void main(){
+ int rectArea= getArea(10, 5);
+  
+  print('The area is =$rectArea');
+}
+
+int getArea(int length, int breath) =>  length * breath;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/Reqired and Optional Positinal Parameters in function
+
+void main(){
+  
+  printCities('New York', 'Amsterdam', ' London');
+}
+
+//Required parameters
+
+void printCities(String name1, String name2, String name3){
+  
+  print('Name1 is $name1' );
+  print('Name1 is $name2' );
+  print('Name1 is $name3' );
+  
+  }
 
