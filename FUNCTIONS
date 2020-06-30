@@ -146,6 +146,133 @@ void findPerimeter(int length, int breath) => print('The perimter is ${2* (lengt
 int getArea (int length, int breath) =>   length * breath;
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Optional Positional Parameters
+//In this code you can not skip Rotterdam od Amsterdam you can not skip one of the parameters 
+becaus 
+void main(){
+  printCities("New York", "Amsterdam", " Rotterdam");
+  
+}
 
+//Required parameters
+void printCities(String name1, String name2, String name3){
+  
+  print("Name 1  is $name1");
+  print("Name 2  is $name2");
+  print("Name 3  is $name3");
+
+  
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+//OPTINAL Parameters with Square bracket and close [] of any of the parameters you can skip it 
+
+
+void main(){
+  printCities("New York", "Amsterdam", " Rotterdam");
+  
+  print("");
+  
+   printCountries("The netherlands", "Britain");
+}
+
+//Required parameters
+void printCities(String name1, String name2, String name3){
+  
+  print("Name 1  is $name1");
+  print("Name 2  is $name2");
+  print("Name 3  is $name3");
+
+  
+}
+
+
+
+void printCountries(String name1, String name2, [String name3]){
+  
+  print("Name 1  is $name1");
+  print("Name 2  is $name2");
+  print("Name 3  is $name3");  // here is null 
+
+  
+}
+
+//OPTINAL NAMED PARAMETERS
+void main(){
+    
+    findVolume(10, 5, 20);
+    
+  }
+
+
+
+
+int findVolume(int length, int breath , int height){
+  
+    print('Length is $length');
+    print('breath is $breath');
+    print('height is $height');
+  
+  print('The volume is is ${length*breath*height}');
+}
+
+------------------------------------------------------------------------------------------------------------------------------
+//Name Parameters you use {} to specify which parameter
+  void main(){
+    
+    findVolume(10, 5, height:20);
+    
+  }
+
+
+
+
+int findVolume(int length, int breath , {int height}){
+  
+    print('Length is $length');
+    print('breath is $breath');
+    print('height is $height');
+  
+  print('The volume is is ${length*breath*height}');
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+//breath:5, height:20 and { int breath, int heigth} becomes Name parameters it will give the same results
+//the sequnce of the parameters does not matter
+ void main(){
+    
+    findVolume(10, breath:5, height:20);
+    
+  }
+
+
+int findVolume(int length, {int breath , int height}){
+  
+    print('Length is $length');
+    print('breath is $breath');
+    print('height is $height');
+  
+  print('The volume is is ${length*breath*height}');
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+void main(){
+    
+    findVolume(10, breath:5, height:20);
+    
+  }
+
+
+
+
+int findVolume(int length, {int breath , int height}){
+  
+    print('Length is $length');
+    print('breath is $breath');
+    print('height is $height');
+  
+  print('The volume is is ${length*breath*height}');
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
