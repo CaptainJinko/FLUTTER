@@ -4,7 +4,6 @@ void main(){
 onPressed() {
  },
 },
-
 ...................................................................................................................................................................................
 
 Fucntion with argument
@@ -38,16 +37,15 @@ void greet(String personToGreet){
  //function in explicit way by flutter team 
  
  void main(){
-   
+ 
    greet(greeting:'How are you', personToGreet:'Elias Jinko');
    
  }
-
+ 
 void greet({String personToGreet, String greeting}){   //remember the curly braces in the argument
   
   print('$greeting, $personToGreet');
 }
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Even though this function calculate it does not returns value void 
 
@@ -63,6 +61,19 @@ void findPerimeter(){
   print('The perameter is = $perimeter');
 }
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Passing parameter or Function with argument or method signature
+
+void main(){
+    findPerimeter(4, 2);
+  
+  }
+
+void findPerimeter( int length, int breath){         //even if you remove [void] it will work but leave it there it is dart convetion 
+     
+  int perimeter= 2 * (length+breath);
+  print('The perameter is = $perimeter');
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //This function uses the return keyword therefore is not void, it returns a value
 
 void main(){
@@ -79,38 +90,6 @@ int findPerimeter(){
   print('$resultPerimeter');
   return resultPerimeter;
 }
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//Passing parameter or Function with argument or method signature
-
-void main(){
-    findPerimeter(4, 2);
-  
-  }
-
-void findPerimeter( int length, int breath){         //even if you remove [void] it will work but leave it there it is dart convetion 
-   
-  
-  int perimeter= 2 * (length+breath);
-  print('The perameter is = $perimeter');
-}
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- void main(){
-   
-   findPerimeter();
- }
-
-findPerimeter(){
-  int length= 6;
-  int breath =4;
-  
-  int perimeter= 2*(length+breath);
-  
-  print(perimeter);
-  
-  print('The perimmter is $perimeter ');
-
-}
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Function which returns a value 
  
@@ -138,8 +117,7 @@ void main(){
    
    print(finalResult);
  }
-
-
+ 
  int add({int n1, int n2}){       //curly braces are needed here because it a named function [add(n1: 5, n2:9) above]
   return  n1 + n2;
    
@@ -175,14 +153,13 @@ void main(){
 
 void findPerimeter(int length, int breath){
   
-  print('The perimter is ${2* (length + breath)}');
+  print('The perimter is ${2* (length + breath)}');     //dont forget the curly bracess
 }
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//Applying the fat arrow [dont use curly braces {}]
+//Short hand syntax also called the fat arrow [dont use curly braces {}] 
 
 void main(){
-  findPerimeter(7,2);
-  
+  findPerimeter(7,2);  
 }
 
 void findPerimeter(int length, int breath) => print('The perimter is ${2* (length + breath)}');
@@ -190,18 +167,14 @@ void findPerimeter(int length, int breath) => print('The perimter is ${2* (lengt
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Applying the fat arrow or SHORT HAND SYNTAX [dont use curly braces {} removing the return keyword]
 
- void main(){
-  //findPerimeter(7,2);
-  
-  int rectArea= getArea(10,5);
-  print('The area is $rectArea');
+void main(){
+  findPerimeter(7,2);
   
 }
 
-void findPerimeter(int length, int breath) => print('The perimter is ${2* (length + breath)}');
-
-int getArea (int length, int breath) =>   length * breath;
-
+void findPerimeter(int length, int breath) => print('The perimter is ${2* (length + breath)}');    //this syntax works with void dont forget curly bracess 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//SHORT HAND SYNTAX when the function is not [void ]
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Optional Positional Parameters
 //In this code you can not skip Rotterdam od Amsterdam you can not skip one of the parameters 
@@ -218,12 +191,9 @@ void printCities(String name1, String name2, String name3){
   print("Name 2  is $name2");
   print("Name 3  is $name3");
 
-  
 }
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //OPTINAL Parameters with Square bracket and close [] of any of the parameters you can skip it 
-
 
 void main(){
   printCities("New York", "Amsterdam", " Rotterdam");
@@ -240,10 +210,7 @@ void printCities(String name1, String name2, String name3){
   print("Name 2  is $name2");
   print("Name 3  is $name3");
 
-  
 }
-
-
 
 void printCountries(String name1, String name2, [String name3]){
   
@@ -251,7 +218,6 @@ void printCountries(String name1, String name2, [String name3]){
   print("Name 2  is $name2");
   print("Name 3  is $name3");  // here is null 
 
-  
 }
 
 //OPTINAL NAMED PARAMETERS
@@ -260,9 +226,6 @@ void main(){
     findVolume(10, 5, 20);
     
   }
-
-
-
 
 int findVolume(int length, int breath , int height){
   
@@ -273,16 +236,13 @@ int findVolume(int length, int breath , int height){
   print('The volume is is ${length*breath*height}');
 }
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Name Parameters you use {} to specify which parameter
   void main(){
     
     findVolume(10, 5, height:20);
     
   }
-
-
-
 
 int findVolume(int length, int breath , {int height}){
   
@@ -293,7 +253,7 @@ int findVolume(int length, int breath , {int height}){
   print('The volume is is ${length*breath*height}');
 }
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //breath:5, height:20 and { int breath, int heigth} becomes Name parameters it will give the same results
 //the sequnce of the parameters does not matter
  void main(){
@@ -302,7 +262,6 @@ int findVolume(int length, int breath , {int height}){
     
   }
 
-
 int findVolume(int length, {int breath , int height}){
   
     print('Length is $length');
@@ -312,15 +271,12 @@ int findVolume(int length, {int breath , int height}){
   print('The volume is is ${length*breath*height}');
 }
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 void main(){
     
     findVolume(10, breath:5, height:20);
-    
+   
   }
-
-
-
 
 int findVolume(int length, {int breath , int height}){
   
@@ -330,6 +286,77 @@ int findVolume(int length, {int breath , int height}){
   
   print('The volume is is ${length*breath*height}');
 }
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Name Parameters 
+//Named parameters prevent erroe if there are large numbers of parameters 
+
+void main(){
+  
+  findVolume(10, 5, 20);
+}
+
+int findVolume(int length, int breath, int height){
+  
+    print('The length is $length');
+    print('The length is $breath');
+    print('The length is $height');
+  
+  return length*breath*height;
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//The named function example
+void main(){
+  
+  findVolume(10, 5, height: 20);
+}
+
+int findVolume(int length, int breath,{ int height}){      //int height is a nemed parameter
+  
+    print('The length is $length');
+    print('The length is $breath');
+    print('The length is $height');
+  
+   print('Volume is ${length* breath* height}');
+   
+   return length*breath*height;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//in named parameters the sequnce does not matter 
+void main(){
+  
+  findVolume(10, breath: 5, height: 20);     //watch the colon : breath and height
+}
+
+int findVolume(int length, {int breath, int height}){         // int breath , int height are named parameters
+  
+    print('The length is $length');
+    print('The length is $breath');
+    print('The length is $height');
+  
+   print('Volume is ${length* breath* height}');      
+  
+  return length*breath*height;
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Optional Default Parameters 
+
+ void main(){
+  
+  findVolume(10, breath: 5, height: 20);
+}
+
+int findVolume(int length, {int breath= 2, int height = 25}){
+  
+    print('The length is $length');
+    print('The length is $breath');
+    print('The length is $height');
+  
+   print('Volume is ${length* breath* height}');
+  
+  return length*breath*height;
+}
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
