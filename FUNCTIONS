@@ -49,7 +49,7 @@ void greet({String personToGreet, String greeting}){   //remember the curly brac
 }
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//Third form of function
+//Even though this function calculate it does not returns value void 
 
 void main(){
     findPerimeter();
@@ -61,6 +61,23 @@ void findPerimeter(){
   
   int perimeter= 2 * (length+breath);
   print('The perameter is = $perimeter');
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//This function uses the return keyword therefore is not void, it returns a value
+
+void main(){
+    findPerimeter();
+    
+ }
+
+int findPerimeter(){
+  
+  int length= 13;
+  int breath= 7;
+     findPerimeter();
+  int resultPerimeter= 2 * (length+ breath); 
+  print('$resultPerimeter');
+  return resultPerimeter;
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Passing parameter or Function with argument or method signature
