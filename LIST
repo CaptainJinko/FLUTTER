@@ -1,0 +1,13 @@
+ void main(){
+
+  List <String> myList=[
+     'Jinko',
+     'Angela',
+     'James', 
+     'Katie',
+     'Jack',
+     'Elias',
+];
+ print('$myList');  
+ 
+}
