@@ -11,3 +11,79 @@
  print('$myList');  
  
 }
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Priint a data through index
+void main(){
+
+  List <String> myList=[
+     'Jinko',
+     'Angela',
+     'James', 
+     'Katie',
+     'Jack',
+     'Elias',
+];
+   
+   print(myList[3]);
+ 
+ }
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//print by index 
+void main(){
+
+  List <String> myList=[
+     'Jinko',
+     'Angela',
+     'James', 
+     'Katie',
+     'Jack',
+     'Elias',
+];
+   
+   print(myList.indexOf('Angela'));   // this will print 1 on the console because index starts from zero
+   
+ 
+ }
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Adding to a list, bear in mind that data added to the list ths way is added to the end of the list  
+void main(){
+
+  List <String> myList=[
+     'Jinko',
+     'Angela',
+     'James', 
+     'Katie',
+     'Jack',
+     'Elias',
+];
+  myList.add('Khadijah');  //this will add Khadijah at the end of the list 
+  print('$myList');
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Adding data between the list or where choose to depeding on the index you enter
+//this code will insert Ben in the index 2 it means the third data 
+
+void main(){
+   
+   List<String> myList=[
+     
+     'Angela',
+     'James',
+     'Katie',
+      'Jack',
+    
+   ];
+   
+  // print(myList);
+   
+   //myList.add('Ben');
+   
+   //print(myList);
+   
+   myList.insert(2,'Ben');
+   
+   print(myList);
+      
+ }
