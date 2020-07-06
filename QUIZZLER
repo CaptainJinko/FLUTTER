@@ -96,3 +96,86 @@ question1: 'You can lead a cow down stairs but not up stairs.', false,
 question2: 'Approximately one quarter of human bones are in the feet.', true,
 question3: 'A slug\'s blood is green.', true,
 */
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Building A ScoreKeepre
+//Adding Row and Icons at the end of the three Expanded 
+
+Row(
+     children: <Widget>[
+            Icon(
+              Icons.check,
+              color: Colors.green,
+            ),
+            Icon(
+              Icons.close,
+              color: Colors.red,
+            ),
+            Icon(
+              Icons.close,
+              color: Colors.red,
+            ),
+            Icon(
+              Icons.close,
+              color: Colors.red,
+            ),
+            Icon(
+              Icons.close,
+              color: Colors.red,
+            ),
+          ],
+        )
+      ],
+    );
+  }
+}  
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Creating a list under the class _QuizPageState....  List scoreKeeper =[] cut the Icons and past them into the list
+//Change the List scoreKeeper = [] to List <Icon> scoreKeeper=[];
+List <Icon> scoreKeeper = [
+    Icon(
+      Icons.check,
+      color: Colors.green,
+    ),
+    Icon(
+      Icons.close,
+      color: Colors.red,
+    ),
+    Icon(
+      Icons.close,
+      color: Colors.red,
+    ),
+    Icon(
+      Icons.close,
+      color: Colors.red,
+    ),
+    Icon(
+      Icons.close,
+      color: Colors.red,
+    ),
+  ];
+
+//The Row with children as 
+
+Row(
+     children:scoreKeeper, //to coresponses with the above List name
+
+
+//By inplanting the Icons into list scoreKeeper we can now add icons scorekeeper.add(....) into setSate method and trigger the creation of an Icon
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ onPressed: () {
+                //The user picked true
+                setState(() {
+                  scoreKeeper.add(
+                    Icon(
+                      Icons.check,
+                      color: Colors.green,
+                    ),
+                  );
+                });
+
+ 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
