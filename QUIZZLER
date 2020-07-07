@@ -280,4 +280,25 @@ Expanded(
           ),
        ),
         
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Setting answers to our question,declare  list variable Eg: like below
+
+List<bool> answers = [
+    false,
+    true,
+    true,
+  ];
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//in onPressed() write the following code below, because you want it vealuated before tracking the next question 
+
+       onPressed: () {
+                //The user picked true
+
+                bool correctAnswers = answers[questionNumber];
+                if (correctAnswers == true) {
+                  print('User got it right');
+                } else {
+             print('User got it wrong');
+      }
+         
