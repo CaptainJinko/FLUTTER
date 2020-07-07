@@ -163,7 +163,7 @@ Row(
      children:scoreKeeper, //to coresponses with the above List name
 
 
-//By inplanting the Icons into list scoreKeeper we can now add icons scorekeeper.add(....) into setSate method and trigger the creation of an Icon
+//By inplanting the Icons into list scoreKeeper we can now add icons scorekeeper.add(....) into setSate method and trigger rebuild and create an Icon
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
