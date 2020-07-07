@@ -99,7 +99,7 @@ question3: 'A slug\'s blood is green.', true,
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Building A ScoreKeepre
-//Adding Row and Icons at the end of the three Expanded 
+//Adding Row and Icons at the end of the three Expanded widgets 
 
 Row(
      children: <Widget>[
@@ -131,8 +131,9 @@ Row(
 }  
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//Creating a list under the class _QuizPageState....  List scoreKeeper =[] cut the Icons and past them into the list
-//Change the List scoreKeeper = [] to List <Icon> scoreKeeper=[];
+//Creating a list under the class _QuizPageState...List scoreKeeper =[] cut the Icons and past them into the listChange the List scoreKeeper =[] to List <Icon>scoreKeeper=[];
+//doing that will give the the flexibility to add any incon esaily and fast 
+
 List <Icon> scoreKeeper = [
     Icon(
       Icons.check,
