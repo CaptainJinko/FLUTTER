@@ -98,7 +98,7 @@ question3: 'A slug\'s blood is green.', true,
 */
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//Building A ScoreKeepre
+//Building A ScoreKeepre Eg: List<Icon> scoreKeeper = [];  to inplate the following Icons it 
 //Adding Row and Icons at the end of the three Expanded widgets 
 
 Row(
@@ -180,7 +180,7 @@ Row(
 
  
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//Geeting rid of Icons in the list and code in eg: onPressed() method List <String> questions=[] where you will inplant all the question. The text widget you qustions[0] 
+//Geeting rid of Icons in the list wrire this code in eg: onPressed() method List <String> questions=[] where you will inplant all the question. The text widget you qustions[0] 
 //to display the question based on the their index, firts solution not a better one, because we alwaays have to enter an index before updateing the list on the screen 
 //First step
 Expanded(
@@ -228,7 +228,7 @@ class _QuizPageState extends State<QuizPage> {
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Forth step
-//We want to increase the qustion number by one whenever a user click the FlatButton, In the onPressed method we can code qustionNumber= questionNumber+1;
+//We want to increase the qustion number by one whenever a user click the FlatButton, In the onPressed method we can write the code as qustionNumber= questionNumber+1;
 // or questionNumber++; , we can print  in th console  by Eg: print(questionNumber); to proof to ourselves it increases by one 
 
 Expanded(
@@ -281,7 +281,7 @@ Expanded(
        ),
         
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//Setting answers to our question,declare  list variable Eg: like below
+//Setting answers to our question,declare  list variable Eg: like below the question list 
 
 List<bool> answers = [
     false,
