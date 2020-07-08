@@ -1,0 +1,29 @@
+//Dart Classes and Objecst
+
+class Car{
+  int numberOfDoors= 5;                      //property / fields   /variable
+   
+    void drive() {                           // function,behavoiur /method
+     print('Wheels start turning ');         //function, behaviour method 
+   
+     } 
+       
+}
+ 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+void main() {
+ Human jenney= Human();
+  
+  print(jenney.height);
+  
+  print(jenney.age);
+  
+}
+
+class Human{
+  double height = 15;
+  int age=0;
+} 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
