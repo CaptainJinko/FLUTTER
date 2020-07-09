@@ -199,6 +199,41 @@ void findPerimeter(int length, int breath) => print('The perimter is ${2* (lengt
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //SHORT HAND SYNTAX when the function is not [void ]
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Named and not name  functions and where put curly braces
+//The below code is a named function therefore you need curly {name:'Amsterdam' } 
+
+void main(){
+  
+  printCities(name1: 'Amsterdam', name2: 'New York', name3:'Rotterdam');
+}
+
+void printCities({String name1, String name2, String name3}){
+  
+  print('The City is $name1');
+  print('The city is $name2');
+  print('The city is $name3');
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//The code is not name function therefore curly braces are not needed
+
+void main(){
+  
+  printCities( 'Amsterdam', 'New York','Rotterdam');
+}
+
+void printCities(String name1, String name2, String name3){
+  
+  print('The City is $name1');
+  print('The city is $name2');
+  print('The city is $name3');
+}
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 //Optional Positional Parameters
 //In this code you can not skip Rotterdam od Amsterdam you can not skip one of the parameters 
 becaus 
