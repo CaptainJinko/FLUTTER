@@ -10,7 +10,7 @@ class Car{
        
 }
  
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 void main() {
  Human jenney= Human();
@@ -26,4 +26,107 @@ class Human{
   int age=0;
 } 
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Tutorials
+
+
+ void main(){
+   
+    var student1=  Student();
+    print('${student1.id} and ${student1.name}');
+ }
+
+//define state(properties) of a Student 
+
+class  Student{
+  
+int id;           //Instance or Field Variable, default value is null
+String name;      //Instance or Field Variable, default value is null
+
+void study(){
+  
+  //Your code
+}
+
+
+  void sleep(){
+    
+    //Your code
+  }
+ }
+ 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ //The below codes have variable, fields and is not null
+
+ void main(){
+   
+    var student1=  Student();
+    print('${student1.id} and ${student1.name}');
+    
+    student1.study();
+    student1.sleep();
+ }
+
+//define state(properties) of a Student 
+
+class  Student{
+  
+int id= 25;                 
+String name = 'Elias';       
+
+void study(){
+  print('${this.name} is now stuying');
+  //Your code
+}
+
+
+  void sleep(){
+    print('${this.name} is now sleeping');
+    //Your code
+  }
+ }
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ void main(){
+   
+    var student1=  Student();      //One Object is reference variable
+    print('${student1.id} and ${student1.name}');
+   
+    
+    
+    student1.study();
+    student1.sleep();
+   
+  
+   
+    var student2= Student();   //One Object, students is reference variable 
+    student2.id= 46;
+    student2.name= 'Jinko';
+    print('${student2.id} and ${student2.name}');
+    student2.study();
+    student2.sleep();
+   
+    
+ }
+
+//define state(properties) of a Student 
+
+class  Student{
+  
+int id= 23;                 
+String name = 'Elias';       
+
+void study(){
+  print('${this.name} is now stuying');
+  
+}
+
+
+  void sleep(){
+    print('${this.name} is now sleeping');
+    
+  }
+}
+ 
