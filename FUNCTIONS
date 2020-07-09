@@ -156,6 +156,29 @@ void findPerimeter(int length, int breath){
   print('The perimter is ${2* (length + breath)}');     //dont forget the curly bracess
 }
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+void main(){
+  rectArea(18, 12);
+}
+
+void rectArea(int length, int breath)=> print('The total area is ${(length*breath)}');
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ void main(){
+   rectArea();
+ }
+  
+rectArea(){
+  
+   int length = 18;
+   int breath = 12;
+  
+   int total = length * breath;
+  
+  print('The tota area is $total');
+  
+  return total;
+}  
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
 //Short hand syntax also called the fat arrow [dont use curly braces {}] 
 
 void main(){
