@@ -9,7 +9,146 @@ class Car{
      } 
        
 }
- 
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ void main(){
+   Human elias= Human();
+   print(elias.height);
+   print(elias.age);
+   print(elias.name);
+   
+   Human jinko= Human();
+   print(jinko.height);
+   print(jinko.name);
+   print(jinko.age);
+ }
+
+class Human{
+  
+  double height= 9.9;
+  String name= 'Elias';
+  int age=45;
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+void main(){
+  Human jenny = Human();
+  
+  print(jenny.height);
+  
+//   jenny.height=20; 
+//   print(jenny.height);
+//   print(jenny.age);
+  
+  Human james= Human();
+  print(james.height);
+  
+}
+
+class Human{
+  
+  double height= 15;
+  int age= 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Initialition properties with a different values
+
+void main(){
+   Human jenny = Human(15);
+   print(jenny.height);
+   
+   Human james= Human(20);
+   print(james.height);
+   
+   Human elias =Human(45);
+   print(elias.height);
+}
+
+class Human{
+  
+  double height= 15;
+  int age= 0;
+  
+  Human(double startingHeight) {        //Constructor
+    height = startingHeight;          
+    
+  }
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Name parameters to make clearer. Take note of the curly braces
+
+void main(){
+   Human jenny = Human(startingHeight:15);
+   print(jenny.height);
+   
+   Human james= Human(startingHeight:20);
+   print(james.height);
+   
+   Human elias =Human(startingHeight:45);
+   print(elias.height);
+}
+
+class Human{
+  
+  double height= 15;
+  int age= 0;
+  
+  Human({double startingHeight}) {
+    height = startingHeight;
+    
+  }
+
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Creating a method inside a class[function defined in a class is called a method ]
+void main(){
+   Human jenny = Human(startingHeight:15);
+   print(jenny.height);
+    
+   jenny.talk('Why is flutter so interesting');
+}
+
+class Human{
+  
+  double height= 15;
+  int age= 0;
+  
+  Human({double startingHeight}) {
+    height = startingHeight;
+    
+  }
+  void talk(String whatToSay){     Take notice of the [String is works without The String declaration as well
+    print(whatToSay);
+  }
+
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+void main(){
+   Human jenny = Human(startingHeight:15);
+   print(jenny.height);
+    
+   jenny.talk('Why is flutter so interesting');
+}
+
+class Human{
+  
+  double height= 15;
+  int age= 0;
+  
+  Human({double startingHeight}) {
+    height = startingHeight;
+    
+  }
+  void talk(String whatToSay){   //Take notice with String declaration it is specific data type without is dynamic accepts all
+    print(whatToSay);
+  }
+
+}
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 void main() {
