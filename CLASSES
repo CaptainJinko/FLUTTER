@@ -74,7 +74,6 @@ class Human{
   }
 
 }
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Name parameters to make clearer. Take note of the curly braces
 
@@ -118,10 +117,43 @@ class Human{
     height = startingHeight;
     
   }
-  void talk(String whatToSay){     Take notice of the [String is works without The String declaration as well
+  void talk(String whatToSay){    constructor Take notice of the [String is works without The String declaration as well
     print(whatToSay);
   }
 
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//More examples with constructors
+
+void main() {
+  Student james = Student(startingHeight: 12);
+  print(james.height);
+
+  Student john = Student(startingHeight: 26);
+  print(john.height);
+
+  Student elias = Student(startingHeight: 10);
+  print(elias.height);
+
+  Student mary = Student(startingHeight: 15);
+  print(mary.height);
+
+  print(' ');
+
+  mary.speak('Hello boys we are becoming flutter gurus');
+}
+
+class Student {
+  int age = 25;
+  double height = 1.9;
+
+  Student({double startingHeight}) {
+    //constructors
+    height = startingHeight;
+  }
+  void speak(String saySomething) {
+    print(saySomething);
+  }
 }
 
 
