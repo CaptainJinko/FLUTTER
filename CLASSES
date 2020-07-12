@@ -354,4 +354,43 @@ class ElectricCar extends Car{
  int batteryLevel= 125; 
 }
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //Polymorphism The word polymorphism means having many forms, we method drive() in different forms
+  void main(){
+//   Car myNormalCar = Car();
+   
+//    print(myNormalCar.numberOfSeat);     // printing numer of seat from the field or property
+  
+//    myNormalCar.drive();                  //calling method to print wheels turns on the console
+   
+   ElectricCar myBenz = ElectricCar(); 
+   myBenz.drive(); 
+   print('My Benz has ${myBenz.numberOfSeat} seats');
+   print('My Benz battery level is ${myBenz.batteryLevel} volt');
+   
+   LevitatingCar myMagLev= LevitatingCar();
+   myMagLev.drive();
+   
+  
+ }
+ 
+class Car{
+  int numberOfSeat= 5;
+  
+  void drive(){
+    print('wheels turn'); 
+    
+    
+  }
+}
+
+class ElectricCar extends Car{
+ int batteryLevel= 125; 
+}
+  
+class LevitatingCar extends Car{
+  @override                                  //override the oarent behavour and provide our customised version of it
+  void drive(){
+    print('glide forwards');
+  }
+}
   
