@@ -49,31 +49,7 @@ class Human{
   double height= 15;
   int age= 0;
 }
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//Initialition properties with a different values
-
-void main(){
-   Human jenny = Human(15);
-   print(jenny.height);
-   
-   Human james= Human(20);
-   print(james.height);
-   
-   Human elias =Human(45);
-   print(elias.height);
-}
-
-class Human{
-  
-  double height= 15;
-  int age= 0;
-  
-  Human(double startingHeight) {        //Constructor
-    height = startingHeight;          
-    
-  }
-
-}
+ 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Name parameters to make clearer. Take note of the curly braces
 
