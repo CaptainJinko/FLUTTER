@@ -69,7 +69,7 @@ class Human{
   double height= 15;
   int age= 0;
   
-  Human({double startingHeight}) {
+  Human({double startingHeight}) {      //Constructor
     height = startingHeight;
     
   }
@@ -259,4 +259,99 @@ void study(){
     
   }
 }
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//INHERITANCE
+//Inheritance
+
+void main(){
+  Car myNormalCar = Car();
+   
+   print(myNormalCar.numberOfSeat); // printing numer of seat from the field or property
+   myNormalCar.drive();   //calling method to print wheels turns on the console
  
+ }
+ 
+class Car{
+  int numberOfSeat= 5;
+  
+  void drive(){
+    print('wheels turn');
+  }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ void main(){
+  Car myNormalCar = Car();
+   
+   print(myNormalCar.numberOfSeat);     // printing numer of seat from the field or property
+   myNormalCar.drive();                  //calling method to print wheels turns on the console   
+     
+ }
+ 
+class Car{
+  int numberOfSeat= 5;
+  
+  void drive(){
+    print('wheels turn'); 
+    
+    
+  }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+//ElectricCar has inheritated methods and propertie of Car 
+
+void main(){
+//   Car myNormalCar = Car();   
+//    print(myNormalCar.numberOfSeat);     // printing numer of seat from the field or property 
+//    myNormalCar.drive();                  //calling method to print wheels turns on the console
+
+   
+   ElectricCar myBenz = ElectricCar(); 
+   myBenz.drive(); 
+   print('My Benz has ${myBenz.numberOfSeat} seats');
+  
+ }
+ 
+class Car{
+  int numberOfSeat= 5;
+  
+  void drive(){
+    print('wheels turn'); 
+    
+    
+  }
+}
+
+class ElectricCar extends Car{
+  
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Electric has its own funatinalities 
+
+ void main(){
+//   Car myNormalCar = Car(); 
+//    print(myNormalCar.numberOfSeat);     // printing numer of seat from the field or property
+//    myNormalCar.drive();                  //calling method to print wheels turns on the console
+   
+   ElectricCar myBenz = ElectricCar(); 
+   myBenz.drive(); 
+   print('My Benz has ${myBenz.numberOfSeat} seats');
+   print('My Benz battery level is ${myBenz.batteryLevel} volt');
+   
+  
+ }
+ 
+class Car{
+  int numberOfSeat= 5;
+  
+  void drive(){
+    print('wheels turn'); 
+    
+  }
+}
+
+class ElectricCar extends Car{
+ int batteryLevel= 125; 
+}
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
