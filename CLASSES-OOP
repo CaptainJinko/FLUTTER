@@ -354,7 +354,7 @@ class ElectricCar extends Car{
  int batteryLevel= 125; 
 }
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  //Polymorphism The word polymorphism means having many forms, we method drive() in different forms
+  //Polymorphism The word polymorphism means having many forms, we method drive() in different forms/ Chaging shapes 
   void main(){
 //   Car myNormalCar = Car();
    
