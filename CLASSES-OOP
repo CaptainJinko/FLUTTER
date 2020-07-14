@@ -393,4 +393,45 @@ class LevitatingCar extends Car{
     print('glide forwards');
   }
 }
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Polymorphismin action, SelfDrivingCar has inherited some action from the parent class and also has some of its functionalities 
+
+void main(){
+   
+   SelfDrivingCar myWaymo= SelfDrivingCar('1 Hecker Way');
+    
+  myWaymo.drive();
+   
+   
+ }
+ 
+class Car{
+  int numberOfSeat= 5;
   
+  void drive(){
+    print('wheels turn'); 
+    
+  }
+}
+
+class ElectricCar extends Car{
+ int batteryLevel= 125; 
+}
+  
+class SelfDrivingCar extends Car {
+ 
+  String destination;
+  
+  SelfDrivingCar(String userSetDestination){
+    destination = userSetDestination;
+  }
+      
+  //@override
+  void drive(){
+    super.drive();
+    
+    print('sterring towards $destination');
+  }
+  
+} 
+--------------------------------------------------------------
