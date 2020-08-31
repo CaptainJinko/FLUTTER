@@ -1,4 +1,4 @@
-//Using the fat arrow
+//Using the fat arrow without Scaffold widget
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -8,6 +8,7 @@ void main() => runApp(MaterialApp(
     ));
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//No /scaffold widget
 import 'package:flutter/material.dart';
 
 void main() {
