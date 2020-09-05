@@ -1,0 +1,51 @@
+//How incoporate or upload images from your computer into your programm
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.indigo,
+        appBar: AppBar(
+          backgroundColor: Colors.teal[900],
+          title: Center(
+            child: Text(
+              'Sierra Leone Diamond',
+              style: TextStyle(
+                fontSize: 30,
+              ),
+            ),
+          ),
+        ),
+        body: Center(
+          child: Image.asset('images/diamond.png'),
+        ),
+      ),
+    ),
+  );
+}
+
+//the associated YamL file 
+name: diamond
+description: A new Flutter application.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
+  assets:
+    - images/diamond.png
