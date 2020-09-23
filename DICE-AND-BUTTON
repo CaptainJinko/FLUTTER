@@ -94,16 +94,55 @@ class DicePage extends StatelessWidget {
         ),
       ],
 ..................................................................................................................................................................
+/We can use the itention action to add Padding to our two images, by default it has 8 demenssion, can customise it to 16
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Image.asset('images/dice1.png'),
+            ),
+          ),
+ Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Image.asset('images/dice1.png'),
+            ),
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//How to add [Flatbutton] to the images and void function or ananymous function onPreesed()
+
+Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: FlatButton(
+                onPressed: () {
+                  print('The Left button got pressed');
+                },
+                child: Image.asset('images/dice1.png'),
+              ),
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: FlatButton(
+                onPressed: () {
+                  print('The Right Button got pressed');
+                },
+                child: Image.asset('images/dice1.png'),
+              ),
+        ),
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+xxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 
 
 
 
-
-
-
-...............................................................................................................................................................................
+................
 //Adding image by using Image.asset('images/dice1.png') from your folder
 
 import 'package:flutter/material.dart';
