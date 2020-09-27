@@ -313,7 +313,6 @@ class DicePage extends StatelessWidget {
 //To create and call a function in dart, you follow this syntax
 // void getMilk () { //do somthing  code in this block }
 // getMilk(); 
-
 // getMilk is the name of the function,  { where you write your code,    }
 // getMilk(); // how you call the function 
 // the above method is known as named function because it has a name. there is also ananymous function which has no name and looks 
@@ -321,7 +320,9 @@ class DicePage extends StatelessWidget {
 // () {     //  do something }
 //Eg  onPressed: () {/// do something is an ananymous function }
 //Making the dice image change reactively 
- 
+
+//In oder to click a button or listener to update a value, you need do that in [statefulwidget] just like the way you create stateless, inplate the stateful into the stateless.
+//and delete the skeleton of the statelsswidget before you can use the function setState( () {});
 
 import 'dart:math';
 import 'package:flutter/material.dart';
