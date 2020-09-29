@@ -93,9 +93,9 @@ class DicePage extends StatelessWidget {
           child: Image.asset('images/dice1.png'),
         ),
       ],
-..................................................................................................................................................................
+................................................................................................................................................................................
 /We can use the itention action to add Padding to our two images, by default it has 8 demenssion, can customise it to 16
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------...........
  Expanded(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -133,16 +133,8 @@ Expanded(
               ),
         ),
 
---------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-xxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
-
-
-
-
-................
 //Adding image by using Image.asset('images/dice1.png') from your folder
 
 import 'package:flutter/material.dart';
@@ -262,9 +254,8 @@ class DicePage extends StatelessWidget {
 }
 
 ................................................................................................................................................................................
+//FlatButton with [VoidCallBack ] Adding FlatButton to our code for functioality //invoking ananymous  methods [onPreesed ] to write a text message in console
 
-//FlatButton with [VoidCallBack ] Adding FlatButton to our code for functioality 
-//invoking ananymous  methods [onPreesed ] to write a text message in console
 import 'package:flutter/material.dart';
 
 void main() {
@@ -383,7 +374,7 @@ class _DicePageState extends State<DicePage> {
 
 ................................................................................................................................................................................
 
-//When you to the reaction of the two dices by clicking any of the buttons, then the below code is the solution 
+//To get the two listeners [Buttons] updating values you should [import 'dart:math]'library.The final code is below 
 
 import 'dart:math';
 import 'package:flutter/material.dart';
@@ -394,7 +385,15 @@ void main() {
       home: Scaffold(
         backgroundColor: Colors.red,
         appBar: AppBar(
-          title: Text('Dicee for Fredrick '),
+          title: Center(
+            child: Text(
+              'ALTALHAHOUI GAME OF LOVE',
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
           backgroundColor: Colors.red,
         ),
         body: DicePage(),
@@ -420,9 +419,9 @@ class _DicePageState extends State<DicePage> {
             child: FlatButton(
               onPressed: () {
                 setState(() {
-                  leftDiceNumber = Random().nextInt(6) + 1;
-                  rightDiceNumber = Random().nextInt(6) + 1;
+                  leftDiceNumber = Random().nextInt(9) + 1;
                 });
+                print('The Left button is clicked');
               },
               child: Image.asset('images/dice$leftDiceNumber.png'),
             ),
@@ -431,9 +430,9 @@ class _DicePageState extends State<DicePage> {
             child: FlatButton(
               onPressed: () {
                 setState(() {
-                  leftDiceNumber = Random().nextInt(6) + 1;
-                  rightDiceNumber = Random().nextInt(6) + 1;
+                  rightDiceNumber = Random().nextInt(9) + 1;
                 });
+                print('The Right Button is Clicked');
               },
               child: Image.asset('images/dice$rightDiceNumber.png'),
             ),
@@ -443,156 +442,3 @@ class _DicePageState extends State<DicePage> {
     );
   }
 }
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-//In order to change the dice by clicking of the button, the following code should be updated 
-//which make sure the [setState () {}] functions contain both leftDiceNumber and rightDice varibles
-
-import 'package:flutter/material.dart';
-import 'dart:math';
-
-void main() {
-  runApp(
-    MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.red,
-        appBar: AppBar(
-          title: Center(
-            child: Text(
-              'Dice',
-              style: TextStyle(
-                fontSize: 25.0,
-              ),
-            ),
-          ),
-          backgroundColor: Colors.red,
-        ),
-        body: DicePage(),
-      ),
-    ),
-  );
-}
-
-class DicePage extends StatefulWidget {
-  @override
-  _DicePageState createState() => _DicePageState();
-}
-
-class _DicePageState extends State<DicePage> {
-  int leftDiceNumber = 1;
-  int rightDiceNumber = 1;
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            child: FlatButton(
-              onPressed: () {
-                setState(() {
-                  leftDiceNumber = Random().nextInt(6) + 1;
-                  rightDiceNumber = Random().nextInt(6) + 1;
-                });
-              },
-              child: Image(
-                image: AssetImage('images/dice$leftDiceNumber.png'),
-              ),
-            ),
-          ),
-          Expanded(
-            child: FlatButton(
-              onPressed: () {
-                setState(() {
-                  leftDiceNumber = Random().nextInt(6) + 1;
-                  rightDiceNumber = Random().nextInt(6) + 1;
-                });
-                print('The Right Button is Clicked');
-              },
-              child: Image(
-                image: AssetImage('images/dice$rightDiceNumber.png'),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
- 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//writing a function to to minimun more code so that we can call the function and we dont have be repeating the code 
-
-import 'package:flutter/material.dart';
-import 'dart:math';
-
-void main() {
-  runApp(
-    MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.red,
-        appBar: AppBar(
-          title: Center(
-            child: Text(
-              'Dice',
-              style: TextStyle(
-                fontSize: 25.0,
-              ),
-            ),
-          ),
-          backgroundColor: Colors.red,
-        ),
-        body: DicePage(),
-      ),
-    ),
-  );
-}
-
-class DicePage extends StatefulWidget {
-  @override
-  _DicePageState createState() => _DicePageState();
-}
-
-class _DicePageState extends State<DicePage> {
-  int leftDiceNumber = 1;
-  int rightDiceNumber = 1;
-
-  void changeDiceFace() {
-    setState(() {
-      leftDiceNumber = Random().nextInt(6) + 1;
-      rightDiceNumber = Random().nextInt(6) + 1;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            child: FlatButton(
-              onPressed: () {
-                changeDiceFace();
-              },
-              child: Image(
-                image: AssetImage('images/dice$leftDiceNumber.png'),
-              ),
-            ),
-          ),
-          Expanded(
-            child: FlatButton(
-              onPressed: () {
-                changeDiceFace();
-              },
-              child: Image(
-                image: AssetImage('images/dice$rightDiceNumber.png'),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-  
