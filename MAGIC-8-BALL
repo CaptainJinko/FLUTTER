@@ -38,7 +38,7 @@ class MagicBall extends StatelessWidget {
   }
 }
 
-------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Wiithout Container
 
 import 'package:flutter/material.dart';
@@ -47,16 +47,20 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Colors.blue,
         appBar: AppBar(
-          backgroundColor: Colors.blue[900],
           title: Center(
-            child: Text('Ask Me Anything'),
+            child: Text(
+              'Ask Me Anything',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+              ),
+            ),
           ),
+          backgroundColor: Colors.blue[900],
         ),
-        body: Center(
-          child: MagicBall(),
-        ),
+        body: MagicBall(),
       ),
     ),
   );
@@ -65,16 +69,17 @@ void main() {
 class MagicBall extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Expanded(
+      children: [
+        Center(
           child: CircleAvatar(
-            radius: 150.0,
-            child: Image.asset('images/ball2.png'),
+            maxRadius: 160,
+            backgroundImage: AssetImage('images/ball1.png'),
           ),
-        )
+        ),
       ],
     );
   }
 }
+
