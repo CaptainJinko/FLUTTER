@@ -83,3 +83,63 @@ class MagicBall extends StatelessWidget {
   }
 }
 
+// complete code of MagicBall 
+
+import 'dart:math';
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.blue,
+        appBar: AppBar(
+          title: Center(
+            child: Text(
+              'Ask Me Anything',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+              ),
+            ),
+          ),
+          backgroundColor: Colors.blue[900],
+        ),
+        body: MagicBall(),
+      ),
+    ),
+  );
+}
+
+class MagicBall extends StatefulWidget {
+  @override
+  _MagicBallState createState() => _MagicBallState();
+}
+
+class _MagicBallState extends State<MagicBall> {
+  int countBall = 1;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Center(
+          child: FlatButton(
+            onPressed: () {
+              setState(() {
+                countBall = Random().nextInt(5) + 1;
+              });
+              //print('The Ball got pressed ');
+            },
+            child: CircleAvatar(
+              maxRadius: 160,
+              backgroundImage: AssetImage('images/ball$countBall.png'),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
