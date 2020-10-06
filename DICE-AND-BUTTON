@@ -454,6 +454,14 @@ void changeDiceFace() {
 
 //After that call the function where necessary, changeDiceFace();
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//magicBall complete code with function and calling the function in [onPressed ()]
+void magicBallAnswers() {
+    setState(() {
+      countBall = Random().nextInt(5) + 1;
+    });
+  }
+.................................................................................................................................................................................
+//
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
