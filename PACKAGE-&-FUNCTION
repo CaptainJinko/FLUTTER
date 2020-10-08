@@ -1,3 +1,83 @@
+/* in other to use flutter packages https://pub.dartlang.org and search for the package u want incoporate into your project
+example:
+This package contains a list of english words for use in other tools. From spell checkers, to ngram analysis.
+Warning: Loading Long Lists Can Reduce Application Performance
+Usage 
+A simple usage example:
+import 'package:list_english_words/list_english_words.dart';
+
+main() {
+  print(list_english_words.sublist(0, 50).join('\n'));
+}
+*/
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+import 'package:flutter/material.dart';
+import 'package:list_english_words/list_english_words.dart';
+
+void main() => runApp(XylophoneApp());
+
+class XylophoneApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Text(
+              list_english_words.sublist(0, 50).join(),
+              style: TextStyle(fontSize: 18, color: Colors.red),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+------------------------------------------------------------------------------------------------------------------------------
+//some changes in the package to arrange words vertical 
+
+ child: Text(
+              list_english_words.sublist(0, 50).join(('\n')),
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.red,
+                fontWeight: FontWeight.bold,
+              ),
+           ),
+ 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Yaml file with dependencies of list_english_words.sublist 
+
+name: xylophone
+description: A new Flutter application.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+  list_english_words: ^0.1.1+2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Xylohpnes app[cloning of xylophone code to start the app  
 
 import 'package:flutter/material.dart';
@@ -48,7 +128,7 @@ flutter:
   assets:
     - assets/
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //foundation of a xylophnes app without [app Bar], using the new version syntax as [ void main() =>runApp(xylophoneApp()); 
 voi
 import 'package:flutter/material.dart';
