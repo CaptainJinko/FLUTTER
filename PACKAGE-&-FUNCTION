@@ -35,7 +35,7 @@ class XylophoneApp extends StatelessWidget {
   }
 }
 
-------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //some changes in the package to arrange words vertical 
 
  child: Text(
@@ -248,7 +248,7 @@ class XylophoneApp extends StatelessWidget {
 //xylophone with variables,fuction impletations and calling the functiion in method onPressed:() {} to reduce repeative coding 
 //variable and function at 
 // [class XylophoneApp extends StatelessWidget {
-  void playXylophone(int soundNumber) {
+  void playXylophone(int soundNumber) {     //inpu argument 
     final player = AudioCache();
     player.play('note$soundNumber.wav');
   }]
