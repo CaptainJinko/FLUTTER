@@ -258,7 +258,7 @@ class XylophoneApp extends StatelessWidget {
 },
 
 //calling the function in method onPressed(){
-   playXylophone();
+   playXylophone();  
 },
  
 .................................................................................................................................................................................
