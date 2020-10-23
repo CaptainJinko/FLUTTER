@@ -1,8 +1,8 @@
-/*From a programming point of view Same concept here goes with Classes and Object’s terminology.The blueprint is called Class and the microphones or any other devices is called object here.
-Class is a blueprint from which we can create a number of objects. All objects will have access to all properties and methods. You can also modify access according to your need.
-In Object Oriented Programming class is made up of four main things Properties (Instance Variables) Methods (Functions) Getters and Setters Constructors These all components 
-are also called data members of the class. Remember here Properties can be also called Instance Variable and Methods are also called Functions.
-*/class as blue print and out of it you can create more objects  
+/*From a programming point of view Same concept here goes with Classes and Object’s terminology.The blueprint is called Class and the microphones or any other devices is
+called object here.Class is a blueprint from which we can create a number of objects. All objects will have access to all properties and methods. You can also modify
+access according to your need.In Object Oriented Programming class is made up of four main things Properties (Instance Variables) Methods (Functions) Getters and 
+Setters Constructors These all components are also called data members of the class. Remember here Properties can be also called Instance Variable and Methods are also 
+called Functions.*/
 [1]
 Syntax of Declaring Class
 class class_name {
