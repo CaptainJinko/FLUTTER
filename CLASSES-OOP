@@ -3,70 +3,7 @@ called object here.Class is a blueprint from which we can create a number of obj
 access according to your need.In Object Oriented Programming class is made up of four main things Properties (Instance Variables) Methods (Functions) Getters and 
 Setters Constructors These all components are also called data members of the class. Remember here Properties can be also called Instance Variable and Methods are also 
 called Functions.*/
-[1]
-Syntax of Declaring Class
-class class_name {
-   // Properties (Instance Variables)
-   // Constructor
-   // Methods (Functions)
-   // Getters and Setters
-}
-Sample Code
-[2]
-class Mobile {
-  String color;
-  String brandName;
 
-  String calling() {
-    return "Mobile can do calling";
-  }
-
-  String musicPlay() {
-    return "Mobile can play Music";
-  }
-}
-------------------------------------------------------------------------------------
-//Let’s understand all concepts by one complete program
-class Mobile {
-  String color; // Property
-  String brandName;
-  String modelName;
-
-  String calling() { // Method Creation
-    return "Mobile can do calling";
-  }
-
-  String musicPlay() {
-    return "Mobile can play Music";
-  }
-
-  String videoPlay() {
-    return "Mobile can play video";
-  }
-}
-
-main() {
-  var myMobile = new Mobile(); // Creating Object
-
-  myMobile.color = "White"; // Accessing Class's Property
-  myMobile.brandName = "Apple Inc.";
-  myMobile.modelName = "iPhone 14";
-  
-  print(myMobile.color);
-  print(myMobile.modelName);
-  print(myMobile.brandName);
-  print(myMobile.calling());
-  print(myMobile.musicPlay());
-  print(myMobile.videoPlay());
-}
-
-Output
-White
-iPhone 14
-Apple Inc.
-Mobile can do calling
-Mobile can play Music
-Mobile can play video
 ...............................................................................................................................................................................................
 
 void main(){
@@ -119,7 +56,7 @@ class Human{
 }
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//You can also make it specific as below, in tis case dont forget {} curly braces in constructor
+//You can also make it specific as below, in this case dont forget {} curly braces in constructor
 
 void main(){
   
@@ -172,13 +109,7 @@ class Human{
   }
 }
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-................................................................................................................................................................................
-//Dart Classes and Objecst
+//Dart Classes and Objecst................................................................................................................................................................................
 
 class Car{
   int numberOfDoors= 5;                      //property / fields   /variable
@@ -334,21 +265,7 @@ class Human{
   }
 
 }
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-void main() {
- Human jenney= Human();
-  
-  print(jenney.height);
-  
-  print(jenney.age);
-  
-}
-
-class Human{
-  double height = 15;
-  int age=0;
-} 
+ 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Tutorials
 
@@ -375,6 +292,71 @@ void study(){
     //Your code
   }
  }
+ -----------------------------------------------------------------------------------------
+ [1]
+Syntax of Declaring Class
+class class_name {
+   // Properties (Instance Variables)
+   // Constructor
+   // Methods (Functions)
+   // Getters and Setters
+}
+Sample Code
+[2]
+class Mobile {
+  String color;
+  String brandName;
+
+  String calling() {
+    return "Mobile can do calling";
+  }
+
+  String musicPlay() {
+    return "Mobile can play Music";
+  }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Let’s understand all concepts by one complete program
+class Mobile {
+  String color; // Property
+  String brandName;
+  String modelName;
+
+  String calling() { // Method Creation
+    return "Mobile can do calling";
+  }
+
+  String musicPlay() {
+    return "Mobile can play Music";
+  }
+
+  String videoPlay() {
+    return "Mobile can play video";
+  }
+}
+
+main() {
+  var myMobile = new Mobile(); // Creating Object
+
+  myMobile.color = "White"; // Accessing Class's Property
+  myMobile.brandName = "Apple Inc.";
+  myMobile.modelName = "iPhone 14";
+  
+  print(myMobile.color);
+  print(myMobile.modelName);
+  print(myMobile.brandName);
+  print(myMobile.calling());
+  print(myMobile.musicPlay());
+  print(myMobile.videoPlay());
+}
+
+Output
+White
+iPhone 14
+Apple Inc.
+Mobile can do calling
+Mobile can play Music
+Mobile can play video
  
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  //The below codes have variable, fields and is not null
@@ -614,4 +596,3 @@ class SelfDrivingCar extends Car {
   }
   
 } 
---------------------------------------------------------------
