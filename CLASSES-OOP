@@ -118,26 +118,6 @@ class Car{
      } 
        
 }
- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- void main(){
-   Human elias= Human();
-   print(elias.height);
-   print(elias.age);
-   print(elias.name);
-   
-   Human jinko= Human();
-   print(jinko.height);
-   print(jinko.name);
-   print(jinko.age);
- }
-
-class Human{
-  
-  double height= 9.9;
-  String name= 'Elias';
-  int age=45;
-}
-
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 void main(){
   Human jenny = Human();
