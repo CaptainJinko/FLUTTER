@@ -3,7 +3,6 @@ called object here.Class is a blueprint from which we can create a number of obj
 access according to your need.In Object Oriented Programming class is made up of four main things Properties (Instance Variables) Methods (Functions) Getters and 
 Setters Constructors These all components are also called data members of the class. Remember here Properties can be also called Instance Variable and Methods are also 
 called Functions.*/
-
 ...............................................................................................................................................................................................
 
 void main(){
@@ -25,7 +24,6 @@ class Human{
   
   int age=0;      //field or property
 }
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //class with constructor, it determines every object with its own seperate properties
 
