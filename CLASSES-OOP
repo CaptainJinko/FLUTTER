@@ -438,7 +438,7 @@ class Car{
 }
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-//ElectricCar has inheritated methods and propertie of Car 
+//ElectricCar has inheritated methods and propertie of Car, this is called inheritance 
 
 void main(){
 //   Car myNormalCar = Car();   
