@@ -574,3 +574,52 @@ class SelfDrivingCar extends Car {
   }
   
 } 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Polymorphism is the ability of an object to take on many forms
+
+void main(){
+     
+    SelfDrivingCar myWaymo= SelfDrivingCar('1 Hacker way');
+    myWaymo.drive();
+    
+ }
+
+class Car{
+  int numberOfSeat=6;
+  
+  void drive(){
+    print('Wheels turn');
+  }
+}
+
+class ElectricCar extends Car{
+  int batteryLevel=100;
+  
+  void recharge(){
+    batteryLevel=100;
+  }
+}
+
+class LevitatingCar extends Car {
+  
+  @override
+  void drive(){
+    print('Glide Forwards');
+  }
+  
+}
+
+class SelfDrivingCar extends Car{
+  String destination;
+  
+  SelfDrivingCar(String userSetDestination){
+    destination =userSetDestination;
+    
+  }
+  @override
+  void drive(){
+    super.drive();
+    print('sterring towards $destination');
+  }
+}
+
