@@ -830,7 +830,6 @@ class _QuizPageState extends State<QuizPage> {
           ),
         );
       }
-
       _quizBrain.nextQuestion();
     });
   }
