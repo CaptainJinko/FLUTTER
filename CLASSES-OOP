@@ -140,7 +140,7 @@ class Human{
 }
  
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//Name parameters to make clearer. Take note of the curly braces
+//Constructors: Name parameters to make clearer. Take note of the curly braces
 
 void main(){
    Human jenny = Human(startingHeight:15);
@@ -220,6 +220,76 @@ class Student {
     print(saySomething);
   }
 }
+---------------------------------------------------------
+ void main(){
+   Human jenny= Human(height: 15, weight: 20);
+   
+   print(jenny.height);
+   print(jenny.weight);
+ }
+
+class Human{
+  
+  double height;
+  double weight;
+  
+  Human({double height, double weight}){
+    this.height= height;
+    this.weight= weight;
+  }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ //Constructors
+ void main(){
+   Human jenny= Human(height: 15, weight: 20);
+   
+   print(jenny.height);
+   print(jenny.weight);
+   
+   
+   Human James= Human(height: 1.9, weight: 5.7);
+   print(James.height);
+   print(James.weight);
+ }
+
+class Human{
+  
+  double height;
+  double weight;
+  
+  Human({double height, double weight}){
+    this.height= height;
+    this.weight= weight;
+  }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/* can can get rid off the syntax [this.height etc ] instead use the a short form inside the constructor like 
+Human({this.height})*/
+
+
+ void main(){
+    Human Jenny = Human(height: 1.9, weight: 2.5);
+    print(Jenny.height);
+    print(Jenny.weight);
+    
+    print('   ');
+    
+    Human James = Human(height:15, weight: 1.7);
+    print(James.height);
+    print(James.weight);
+  }
+
+class Human{
+  
+  double height;
+  double weight;
+  
+  Human({this.height, this.weight});
+     
+  
+}
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 void main(){
@@ -270,7 +340,7 @@ void study(){
     //Your code
   }
  }
- -----------------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  [1]
 Syntax of Declaring Class
 class class_name {
